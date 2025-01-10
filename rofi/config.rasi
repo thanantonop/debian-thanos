@@ -1,6 +1,7 @@
 /** Basic config file **/
 
 configuration {
+  font: "MesloLGS Nerd Font Mono 12";
   show-icons: true;
   icon-theme: "Nordzy-dark";
   display-drun: "";

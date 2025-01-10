@@ -16,7 +16,7 @@ static const int topbar                       = 1;   /* 0 means bottom bar */
 #define ICONSIZE                              17     /* icon size */
 #define ICONSPACING                           5      /* space between icon and title */
 #define SHOWWINICON                           1      /* 0 means no winicon */
-static const char *fonts[]                    = { "MesloLGS Nerd Font Mono:size=16", "NotoColorEmoji:pixelsize=16:antialias=true:autohint=true" };
+static const char *fonts[]                    = { "MesloLGS Nerd Font Mono:size=12", "NotoColorEmoji:pixelsize=12:antialias=true:autohint=true" };
 static const char normbordercolor[]           = "#3B4252";
 static const char normbgcolor[]               = "#2E3440";
 static const char normfgcolor[]               = "#D8DEE9";
@@ -142,7 +142,7 @@ static Key keys[] = {
     TAGKEYS(                        XK_4,                      3)
     TAGKEYS(                        XK_5,                      4)
     { MODKEY|ShiftMask,             XK_q,                      quit,           {0} },
-    { MODKEY|ControlMask,           XK_q,                      spawn,          SHCMD("$HOME/.config/rofi/powermenu.sh")},
+    { MODKEY|ControlMask,           XK_q,                      spawn,          SHCMD("$HOME/.config/rofi/powermenu/powermenu.sh")},
     { MODKEY|ControlMask|ShiftMask, XK_r,                      spawn,          SHCMD("systemctl reboot")},
     { MODKEY|ControlMask|ShiftMask, XK_s,                      spawn,          SHCMD("systemctl suspend")},
 };

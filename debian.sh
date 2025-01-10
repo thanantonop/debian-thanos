@@ -7,3 +7,7 @@ mv ~/fonts ~/.fonts
 git clone https://github.com/alvatip/Nordzy-icon.git
 cd Nordzy-icon/
 sudo ./install.sh
+rm -rf ~/.config/rofi
+rm -rf ~/.config/kitty
+cp -r rofi ~/.config/
+cp -r kitty ~/.config/
