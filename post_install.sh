@@ -19,10 +19,10 @@ git clone https://github.com/ChrisTitusTech/neovim.git
 mkdir ~/github/neovim_stable
 cd ~/github/neovim_stable
 git clone https://github.com/neovim/neovim.git
-cd ~/github/
-git clone https://github.com/EliverLara/Nordic.git
-git clone https://github.com/alvatip/Nordzy-icon.git
-git clone https://github.com/guillaumeboehm/Nordzy-cursors.git
+#cd ~/github/
+#git clone https://github.com/EliverLara/Nordic.git
+#git clone https://github.com/alvatip/Nordzy-icon.git
+#git clone https://github.com/guillaumeboehm/Nordzy-cursors.git
 cd ~
 
 # Install neovim 
@@ -75,7 +75,11 @@ cd ~
 rm -rf ~/linuxtoolbox
 sudo rm -rf /root/linuxtoolbox
 cp -r ~/github/debian-thanos/linuxtoolbox ~/
-sudo cp -r ~/github/debian-thanos/linuxtoolbox /root
+rm -rf ~/linuxtoolbox/mybash
+rm -rf ~/linuxtoolbox/neovim
+cp -r ~/github/mybash ~/linuxtoolbox/
+cp -r ~/github/neovim ~/linuxtoolbox/
+sudo cp -r ~/linuxtoolbox /root
 cd ~
 
 # Install fonts
