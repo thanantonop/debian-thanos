@@ -106,6 +106,7 @@ static Key keys[] = {
     { MODKEY|ControlMask,           XK_e,                      spawn,          SHCMD ("xdg-open .")},
     { MODKEY,                       XK_w,                      spawn,          SHCMD ("looking-glass-client -F")},
     { MODKEY|ShiftMask,             XK_w,                      spawn,          SHCMD ("feh --randomize --bg-fill ~/Pictures/backgrounds/*")},
+    { MODKEY|ControlMask,           XK_l,                      spawn,          SHCMD ("$HOME/.config/i3lock/blur-lock.sh")},
     { 0,                            XF86XK_MonBrightnessUp,    spawn,          SHCMD ("brightnessctl set +250")},
     { 0,                            XF86XK_MonBrightnessDown,  spawn,          SHCMD ("brightnessctl set 250-")},
     { 0,                            XF86XK_AudioLowerVolume,   spawn,          SHCMD ("amixer sset Master 5%- unmute")},

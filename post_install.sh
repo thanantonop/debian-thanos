@@ -1,5 +1,7 @@
-sudo nala install packaging-dev python3 python3-pip dwm dmenu dunst build-essential automake autoconf git vim neovim mc ranger htop btop nmap neofetch tree emacs galculator alacritty transmission-gtk xarchiver xournal lsd bat arandr firefox-esr geany meld blueman vlc mpv audacious cmus trash-cli zoxide nala gimp darktable keepassxc libreoffice libreoffice-gtk3 unzip unrar alsa-utils xbacklight qimgv mate-polkit mate-polkit-common mate-polkit-bin network-manager-gnome -y
-sudo nala install fonts-ubuntu fonts-ubuntu-console fonts-font-awesome fonts-terminus fonts-powerline fonts-crosextra-caladea fonts-crosextra-carlito -y
+sudo nala install packaging-dev python3 python3-pip dwm dmenu dunst build-essential automake autoconf git vim neovim mc ranger htop btop glances nmap neofetch tree scrot emacs galculator alacritty filezilla transmission-gtk xarchiver xournal lsd bat fzf fd-find jq tldr cmus trash-cli zoxide nala arandr ufw firefox-esr geany meld blueman vlc mpv audacious gimp darktable keepassxc libreoffice libreoffice-gtk3 unzip unrar alsa-utils xbacklight qimgv imagemagick imagemagick-common abiword gnumeric synaptic gdebi wireshark i3lock mate-polkit mate-polkit-common mate-polkit-bin network-manager-gnome -y
+sudo nala install qemu-system libvirt-daemon-system virt-manager -y
+sudo nala install fonts-ubuntu fonts-ubuntu-console fonts-font-awesome fonts-terminus fonts-powerline fonts-crosextra-caladea fonts-crosextra-carlito ttf-mscorefonts-installer -y
+sudo ufw enable
 cd dwm-thanos && sudo make clean install
 cd slstatus && sudo make clean install
 cd ~/github/debian-thanos
@@ -11,6 +13,7 @@ rm -rf ~/.config/rofi
 rm -rf ~/.config/dunst
 rm -rf ~/.config/kitty
 rm -rf ~/.config/alacritty
+rm -rf ~/.config/i3lock
 mv ~/.config/picom.conf ~/.config/picom_orig.conf 
 cp -r gtk-2.0 ~/.config/
 cp -r gtk-3.0 ~/.config/
@@ -18,6 +21,7 @@ cp -r rofi ~/.config/
 cp -r dunst ~/.config/
 cp -r kitty ~/.config/
 cp -r alacritty ~/.config/
+cp -r i3lock ~/.config/
 cp picom.conf ~/.config/
 cd ~
 xdg-user-dirs-update
