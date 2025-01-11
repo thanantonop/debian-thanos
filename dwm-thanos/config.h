@@ -3,7 +3,7 @@
 /* appearance */
 static const unsigned int refresh_rate        = 60;  /* matches dwm's mouse event processing to your monitor's refresh rate for smoother window interactions */
 static const unsigned int enable_noborder     = 1;   /* toggles noborder feature (0=disabled, 1=enabled) */
-static const unsigned int borderpx            = 1;   /* border pixel of windows */
+static const unsigned int borderpx            = 2;   /* border pixel of windows */
 static const unsigned int snap                = 26;  /* snap pixel */
 static const int swallowfloating              = 1;   /* 1 means swallow floating windows by default */
 static const unsigned int systraypinning      = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
@@ -20,7 +20,7 @@ static const char *fonts[]                    = { "MesloLGS Nerd Font Mono:size=
 static const char normbordercolor[]           = "#3B4252";
 static const char normbgcolor[]               = "#2E3440";
 static const char normfgcolor[]               = "#D8DEE9";
-static const char selbordercolor[]            = "#434C5E";
+static const char selbordercolor[]            = "#B48EAD";
 static const char selbgcolor[]                = "#434C5E";
 static const char selfgcolor[]                = "#ECEFF4";
 
@@ -35,8 +35,8 @@ static const char *const autostart[] = {
     "xset", "s", "noblank", NULL,
     "xset", "-dpms", NULL,
     "dbus-update-activation-environment", "--systemd", "--all", NULL,
-    "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1", NULL,
-    "flameshot", NULL,
+    "/usr/bin/mate-polkit", NULL,
+/*    "flameshot", NULL, */
     "dunst", NULL,
     "picom", "-b", NULL,
     "sh", "-c", "feh --randomize --bg-fill ~/Pictures/backgrounds/*", NULL,
@@ -102,11 +102,12 @@ static Key keys[] = {
     { MODKEY,                       XK_p,                      spawn,          SHCMD ("flameshot full -p /media/drive/Screenshots/")},
     { MODKEY|ShiftMask,             XK_p,                      spawn,          SHCMD ("flameshot gui -p /media/drive/Screenshots/")},
     { MODKEY|ControlMask,           XK_p,                      spawn,          SHCMD ("flameshot gui --clipboard")},
-    { MODKEY,                       XK_e,                      spawn,          SHCMD ("xdg-open .")},
+    { MODKEY,                       XK_e,                      spawn,          SHCMD ("thunar")},
+    { MODKEY|ControlMask,           XK_e,                      spawn,          SHCMD ("xdg-open .")},
     { MODKEY,                       XK_w,                      spawn,          SHCMD ("looking-glass-client -F")},
     { MODKEY|ShiftMask,             XK_w,                      spawn,          SHCMD ("feh --randomize --bg-fill ~/Pictures/backgrounds/*")},
-    { 0,                            XF86XK_MonBrightnessUp,    spawn,          SHCMD ("xbacklight -inc 10")},
-    { 0,                            XF86XK_MonBrightnessDown,  spawn,          SHCMD ("xbacklight -dec 10")},
+    { 0,                            XF86XK_MonBrightnessUp,    spawn,          SHCMD ("brightnessctl set +250")},
+    { 0,                            XF86XK_MonBrightnessDown,  spawn,          SHCMD ("brightnessctl set 250-")},
     { 0,                            XF86XK_AudioLowerVolume,   spawn,          SHCMD ("amixer sset Master 5%- unmute")},
     { 0,                            XF86XK_AudioMute,          spawn,          SHCMD ("amixer sset Master $(amixer get Master | grep -q '\\[on\\]' && echo 'mute' || echo 'unmute')")},
     { 0,                            XF86XK_AudioRaiseVolume,   spawn,          SHCMD ("amixer sset Master 5%+ unmute")},
