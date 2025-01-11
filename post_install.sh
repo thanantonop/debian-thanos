@@ -73,7 +73,7 @@ cd ~
 # Install linuxtoolbox
 cd ~
 rm -rf ~/linuxtoolbox
-sudo -rf /root/linuxtoolbox
+sudo rm -rf /root/linuxtoolbox
 cp -r ~/github/debian-thanos/linuxtoolbox ~/
 sudo cp -r ~/github/debian-thanos/linuxtoolbox /root
 cd ~
