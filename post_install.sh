@@ -3,6 +3,8 @@ sudo nala install fonts-ubuntu fonts-ubuntu-console fonts-font-awesome fonts-ter
 cd dwm-thanos && sudo make clean install
 cd slstatus && sudo make clean install
 cd ~/github/debian-thanos
+sudo cp 30-keyboard.conf /etc/X11/xorg.conf.d/
+sudo cp 30-touchpad.conf /etc/X11/xorg.conf.d/
 rm -rf ~/.config/gtk-2.0
 rm -rf ~/.config/gtk-3.0
 rm -rf ~/.config/rofi
