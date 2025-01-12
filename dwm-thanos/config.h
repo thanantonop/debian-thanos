@@ -20,7 +20,7 @@ static const char *fonts[]                    = { "MesloLGS Nerd Font Mono:size=
 static const char normbordercolor[]           = "#3B4252";
 static const char normbgcolor[]               = "#2E3440";
 static const char normfgcolor[]               = "#D8DEE9";
-static const char selbordercolor[]            = "#B48EAD";
+static const char selbordercolor[]            = "#EBCB8B";
 static const char selbgcolor[]                = "#434C5E";
 static const char selfgcolor[]                = "#ECEFF4";
 
@@ -38,7 +38,7 @@ static const char *const autostart[] = {
     "/usr/bin/mate-polkit", NULL,
 /*    "flameshot", NULL, */
     "dunst", NULL,
-    "picom", "-b", NULL,
+/*    "picom", "-b", NULL, */
     "sh", "-c", "feh --randomize --bg-fill ~/Pictures/backgrounds/*", NULL,
 /*    "synergy", NULL, */
     "slstatus", NULL,
