@@ -91,7 +91,7 @@ static const Layout layouts[] = {
 #define STATUSBAR "dwmblocks"
 /* commands */
 static const char *launchercmd[] = { "rofi", "-show", "drun", NULL };
-static const char *termcmd[]     = { "alacritty", NULL };
+static const char *termcmd[]     = { "st", NULL };
 
 static Key keys[] = {
     /* modifier                     key                        function        argument */
