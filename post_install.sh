@@ -10,6 +10,11 @@ cd dwm-thanos && sudo make clean install
 cd slstatus && sudo make clean install
 cd ~
 
+# Compile st
+cd ~/github/debian-thanos/
+cd st-thanos && sudo make clean install
+cd ~
+
 # Clone required repos
 cd ~/github/
 git clone https://github.com/ChrisTitusTech/Debian-titus.git
