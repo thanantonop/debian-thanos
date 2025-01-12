@@ -1,5 +1,5 @@
 # Install packages
-sudo nala install packaging-dev python3 python3-pip dwm dmenu stterm dunst build-essential automake autoconf ninja-build gettext cmake curl git vim neovim mc ranger htop btop glances nmap neofetch tree scrot emacs lxappearance galculator alacritty filezilla transmission-gtk xarchiver xournal lsd bat fzf fd-find jq tldr cmus trash-cli zoxide nala arandr ufw firefox-esr geany meld blueman vlc mpv audacious gimp darktable keepassxc chromium libreoffice libreoffice-gtk3 unzip unrar alsa-utils xbacklight qimgv imagemagick imagemagick-common abiword gnumeric synaptic gdebi wireshark i3lock mate-polkit mate-polkit-common mate-polkit-bin network-manager-gnome -y
+sudo nala install packaging-dev python3 python3-pip dwm dmenu stterm dunst build-essential automake autoconf ninja-build gettext cmake curl git vim neovim mc ranger htop btop glances nmap neofetch tree scrot emacs lxappearance nitrogen galculator alacritty filezilla transmission-gtk xarchiver xournal lsd bat fzf fd-find jq tldr cmus trash-cli zoxide nala arandr ufw firefox-esr geany meld blueman vlc mpv audacious gimp darktable keepassxc chromium libreoffice libreoffice-gtk3 unzip unrar alsa-utils xbacklight qimgv imagemagick imagemagick-common abiword gnumeric synaptic gdebi wireshark i3lock mate-polkit mate-polkit-common mate-polkit-bin network-manager-gnome -y
 sudo nala install qemu-system libvirt-daemon-system virt-manager -y
 sudo nala install fonts-ubuntu fonts-ubuntu-console fonts-font-awesome fonts-terminus fonts-powerline fonts-crosextra-caladea fonts-crosextra-carlito ttf-mscorefonts-installer -y
 sudo ufw enable
@@ -14,6 +14,8 @@ cd ~
 cd ~/github/debian-thanos/
 cd st-thanos && sudo make clean install
 cd ~
+sudo ln -s /usr/local/bin/st /usr/bin/xdg-terminal-exec
+sudo ln -s /usr/local/bin/st /usr/bin/gnome-terminal
 
 # Clone required repos
 cd ~/github/

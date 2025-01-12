@@ -40,7 +40,7 @@ static const char *const autostart[] = {
     "dunst", NULL,
     "picom", "-b", NULL,
     "sh", "-c", "feh --randomize --bg-fill ~/Pictures/backgrounds/*", NULL,
-    "synergy", NULL,
+/*    "synergy", NULL, */
     "slstatus", NULL,
     NULL /* terminate */
 };
@@ -96,15 +96,16 @@ static const char *termcmd[]     = { "st", NULL };
 static Key keys[] = {
     /* modifier                     key                        function        argument */
     { MODKEY,                       XK_r,                      spawn,          {.v = launchercmd} },
-    { MODKEY|ControlMask,           XK_r,                      spawn,          SHCMD ("protonrestart")},
+    /* { MODKEY|ControlMask,           XK_r,                      spawn,          SHCMD ("protonrestart")}, */
     { MODKEY,                       XK_x,                      spawn,          {.v = termcmd } },
-    { MODKEY,                       XK_b,                      spawn,          SHCMD ("xdg-open https://")},
+    /* { MODKEY,                       XK_b,                      spawn,          SHCMD ("xdg-open https://")}, */
+    { MODKEY,                       XK_b,                      spawn,          SHCMD ("firefox")},    
     { MODKEY,                       XK_p,                      spawn,          SHCMD ("flameshot full -p /media/drive/Screenshots/")},
     { MODKEY|ShiftMask,             XK_p,                      spawn,          SHCMD ("flameshot gui -p /media/drive/Screenshots/")},
     { MODKEY|ControlMask,           XK_p,                      spawn,          SHCMD ("flameshot gui --clipboard")},
     { MODKEY,                       XK_e,                      spawn,          SHCMD ("thunar")},
     { MODKEY|ControlMask,           XK_e,                      spawn,          SHCMD ("xdg-open .")},
-    { MODKEY,                       XK_w,                      spawn,          SHCMD ("looking-glass-client -F")},
+    /* { MODKEY,                       XK_w,                      spawn,          SHCMD ("looking-glass-client -F")}, */
     { MODKEY|ShiftMask,             XK_w,                      spawn,          SHCMD ("feh --randomize --bg-fill ~/Pictures/backgrounds/*")},
     { MODKEY|ControlMask,           XK_l,                      spawn,          SHCMD ("$HOME/.config/i3lock/blur-lock.sh")},
     { 0,                            XF86XK_MonBrightnessUp,    spawn,          SHCMD ("brightnessctl set +250")},
