@@ -3,7 +3,7 @@
 
 gtk-theme-name="Nordic"
 gtk-icon-theme-name="Nordzy-dark"
-gtk-font-name="Sans 10"
+gtk-font-name="MesloLGS Nerd Font Mono 12"
 gtk-cursor-theme-name="Nordzy-cursors"
 gtk-cursor-theme-size=0
 gtk-toolbar-style=GTK_TOOLBAR_ICONS
