@@ -36,12 +36,12 @@ static const char *const autostart[] = {
     "xset", "-dpms", NULL,
     "dbus-update-activation-environment", "--systemd", "--all", NULL,
     "/usr/bin/mate-polkit", NULL,
-/*    "flameshot", NULL, */
     "dunst", NULL,
-/*    "picom", "-b", NULL, */
     "sh", "-c", "feh --randomize --bg-fill ~/Pictures/backgrounds/*", NULL,
-/*    "synergy", NULL, */
     "slstatus", NULL,
+/*    "picom", "-b", NULL, */    
+/*    "synergy", NULL, */    
+/*    "flameshot", NULL, */    
     NULL /* terminate */
 };
 
